@@ -12,20 +12,21 @@ jobs:
       - name: Run installation of dependencies commands
         run: npm install
 
-  code-vulnerability-scanning:
+  code-vulnerability-scanning-using-snyk:
     runs-on: ubuntu-latest
     needs: install-dependencies
     steps:
         - name: Check out repository code
-          uses: actions/checkout@v3
-        - name: Run vulernability scan
-          run: |
-            echo "To do"
-            echo "Add scanning"
+          uses: actions/checkout@v4
+        - uses: actions/checkout@master
+        - name: Run Snyk to check for vulnerabilities
+          uses: snyk/actions/node@master
+          env:
+            SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
 
   build-and-scan-image:
     runs-on: ubuntu-latest
-    needs: [code-vulnerability-scanning]
+    needs: [code-vulnerability-scanning-using-snyk]
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
