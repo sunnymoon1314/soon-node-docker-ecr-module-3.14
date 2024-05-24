@@ -1,0 +1,22 @@
+{
+  "name": "first-node-application",
+  "version": "1.0.0",
+  "description": "This is my first node application created in module 3.3.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunnymoon1314/first-node-application.git"
+  },
+  "author": "sunnymoon1314",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunnymoon1314/first-node-application/issues"
+  },
+  "homepage": "https://github.com/sunnymoon1314/first-node-application#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
