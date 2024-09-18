@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/sunnymoon1314/first-node-application#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.20.0"
   }
 }
